@@ -91,6 +91,9 @@ La requête **fonctionne** : on récupère le HTML du frontend. Les deux contene
 
 En revanche, `curl http://localhost:8080` **échoue** depuis la toolbox : `localhost` désigne le conteneur lui-même, pas la machine hôte.
 
+> [!note]
+> `curl` n'est pas inclus dans l'image `toolbox`, et l'utilisateur `nonroot` ne peut pas l'installer (voir partie 3). Pour ce test, on l'ajoute à la ligne `apt-get install` du `Dockerfile`, **avant** `USER nonroot`, puis on reconstruit l'image.
+
 ---
 
 ## 3. Gestion des droits utilisateur
