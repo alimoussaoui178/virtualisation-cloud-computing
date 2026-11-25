@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon frontend conteneurisé</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mon premier site conteneurisé 🐳</h1>
+    <p class="subtitle">Servi par <strong>nginx</strong> dans un conteneur Docker</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>TD 3 - Conteneurisation</h2>
+      <p>Cette page HTML/CSS est copiée dans l'image <code>nginx:latest</code> et exposée sur le port <code>80</code>.</p>
+      <p>Lancement : <code>docker run -d -p 8080:80 mon-frontend</code></p>
+    </section>
+
+    <section class="card">
+      <h2>Version</h2>
+      <p id="version">v1</p>
+    </section>
+  </main>
+
+  <footer>Polytech Dijon - Virtualisation &amp; Cloud Computing</footer>
+</body>
+</html>
